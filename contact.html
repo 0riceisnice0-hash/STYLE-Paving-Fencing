@@ -116,9 +116,18 @@
   </footer>
 
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.getElementById('main-nav').classList.toggle('open');
-    });
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle) {
+      navToggle.addEventListener('click', function() {
+        document.getElementById('main-nav').classList.toggle('open');
+      });
+    }
+    var contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+      });
+    }
   </script>
 
 </body>
